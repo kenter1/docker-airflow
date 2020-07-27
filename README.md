@@ -1,8 +1,8 @@
 # How to run with DockerOperator 
-Build the Dockerfile
+##Build the Dockerfile
     sudo docker build . -t custom_airflow
     
-Run Docker Compose
+##Run Docker Compose
     sudo docker-compose -f docker-compose-LocalExecutor.yml up -d
 
 # docker-airflow
