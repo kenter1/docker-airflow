@@ -72,9 +72,17 @@ RUN set -ex \
         /usr/share/man \
         /usr/share/doc \
         /usr/share/doc-base
+RUN pip3 uninstall -y SQLAlchemy \
+    && pip3 install SQLAlchemy==1.3.15
+RUN pip install docker
 
 COPY script/entrypoint.sh /entrypoint.sh
 COPY config/airflow.cfg ${AIRFLOW_USER_HOME}/airflow.cfg
+
+RUN apt-get update && \
+      apt-get -y install sudo
+
+RUN echo airflow:airflow | chpasswd && adduser airflow sudo
 
 RUN chown -R airflow: ${AIRFLOW_USER_HOME}
 
