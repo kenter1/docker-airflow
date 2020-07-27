@@ -1,3 +1,10 @@
+# How to run with DockerOperator 
+Build the Dockerfile
+    sudo docker build . -t custom_airflow
+    
+Run Docker Compose
+    sudo docker-compose -f docker-compose-LocalExecutor.yml up -d
+
 # docker-airflow
 [![CI status](https://github.com/puckel/docker-airflow/workflows/CI/badge.svg?branch=master)](https://github.com/puckel/docker-airflow/actions?query=workflow%3ACI+branch%3Amaster+event%3Apush)
 [![Docker Build status](https://img.shields.io/docker/build/puckel/docker-airflow?style=plastic)](https://hub.docker.com/r/puckel/docker-airflow/tags?ordering=last_updated)
