@@ -4,6 +4,9 @@
     
 ## Run Docker Compose
     sudo docker-compose -f docker-compose-LocalExecutor.yml up -d
+    
+## CHMOD SOCK
+    sudo -S chmod 777 /var/run/docker.sock;
 
 # docker-airflow
 [![CI status](https://github.com/puckel/docker-airflow/workflows/CI/badge.svg?branch=master)](https://github.com/puckel/docker-airflow/actions?query=workflow%3ACI+branch%3Amaster+event%3Apush)
