@@ -133,3 +133,7 @@ case "$1" in
     exec "$@"
     ;;
 esac
+
+if [ -e /var/run/docker.sock ]; then 
+  echo airflow | sudo -S chmod 777 /var/run/docker.sock; 
+fi
